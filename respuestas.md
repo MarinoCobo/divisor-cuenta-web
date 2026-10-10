@@ -24,7 +24,7 @@ Programación Asistida de Aplicaciones · USFQ · Prof. Jose David Vega Sánchez
 | Enunciados modificados en la spec | — | **0 de 53 (0 %)** |
 | Enunciados modificados en la Constitution | — | **18 de 31 (58,1 %)** |
 | Líneas modificadas en el plan | — | **95 añadidas / 58 eliminadas**; **25 de 30 enunciados (83,3 %)** |
-| Casos de aceptación que pasan (0–6) | `no registrado` | **6 de 6** |
+| Casos de aceptación que pasan (0–6) | **6 de 6** | **6 de 6** |
 
 En el laboratorio de Flutter no se llevó bitácora: esas casillas van como `no registrado` y
 **no se estiman**. El historial de la rama `sdd` (16 commits) se anota como contexto, no
@@ -39,11 +39,21 @@ persona programando. El enunciado advierte que el tiempo es una métrica descrip
 secundaria; aquí lo es más que nunca. Las dos correcciones reales que hubo están anotadas
 en `bitacora.md` (nota 1) aunque el enunciado no las cuente como iteración.
 
-**`flutter test` no se pudo ejecutar:** en la máquina donde se hizo este deber no están
-instalados Flutter ni Dart. La rama `sdd` se verificó por inspección (5 archivos de prueba,
-33 pruebas declaradas, los 6 escenarios en `casos_de_prueba.dart`), pero la casilla de
-Flutter queda `no registrado` hasta correrlo en una máquina con el SDK. Detalle en
-`bitacora.md` (nota 3).
+**`flutter test` en la rama `sdd`: verificado.** Se instaló el SDK (Flutter 3.47.7,
+Dart 3.13.5 — las versiones que declara el `plan.md` de Flutter) y se ejecutó:
+
+```console
+$ flutter test
+00:00 +33: All tests passed!
+
+$ flutter analyze
+No issues found! (ran in 8.7s)
+```
+
+33 pruebas en verde, análisis sin issues y la tabla de verificación de la constitución de
+Flutter pasa entera (evidencia en `bitacora.md`, nota 3). La rama de partida cumplía su
+propia especificación antes de migrar, que es la precondición que el deber exige para que
+la comparación tenga sentido.
 
 ---
 
@@ -380,7 +390,7 @@ $ npm run build
 ```
 
 **6 de 6 casos de aceptación en verde**, más la prueba de LSP, más 3 de la vista, más 24
-pruebas de casos borde: **34 en total** (la rama `sdd` de Flutter declara 33).
+pruebas de casos borde: **34 en total** (la rama `sdd` de Flutter pasa 33).
 
 ---
 
