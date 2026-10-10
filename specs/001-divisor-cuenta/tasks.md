@@ -149,3 +149,14 @@ Fase 1 (setup) → Fase 2 (domain base) → US1 (P1) → US2 (P2) → US3 (P3) �
 
 Las tareas marcadas `[P]` de la Fase 1 (T002, T003, T004) y las tres de la Fase 2
 (T007, T008, T009) tocan archivos distintos y no tienen dependencias pendientes entre sí.
+
+---
+
+## Phase 8: Convergence (`/speckit-converge`)
+
+Tareas agregadas por `/speckit-converge` tras `/speckit-implement`. Ver
+`convergencia-speckit.md` para las brechas que las originan.
+
+- [X] T036 Crear `test/casosBorde.test.js` con los casos borde del domain de la spec (monto 0/negativo/infinito/máximo, propina fuera de rango, prioridad de mensajes, ruido de punto flotante, límites de 1e9 y 999 999 personas) per spec.md §Edge Cases (`partial`)
+- [X] T037 Crear `test/pantallaBorde.test.jsx` con los casos borde de la vista (modo inicial, borrado del resultado al editar o cambiar de modo, filtro de 6 dígitos, coma decimal, propina vacía, mapa de estrategias vacío) per spec.md §Edge Cases y FR-006/FR-010/FR-011 (`partial`)
+- [X] T038 Exportar `App` desde `src/main.jsx` y reutilizarla en las pruebas de la vista, para que ninguna prueba de pantalla vuelva a nombrar las implementaciones concretas de `src/data/` per constitución II (`partial`)
